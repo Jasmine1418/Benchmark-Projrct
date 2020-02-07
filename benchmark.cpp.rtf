@@ -87,6 +87,18 @@ void floatOperations()\{\
     auto stop = high_resolution_clock::now();\
     auto time = duration_cast<seconds>(stop - start);\
     cout << "The float point operation benchmark takes " << time.count() << " seconds." << endl;\
+\}\
+\
+//main function that calls all the other functions in the program\
+int main()\{\
+    intOperations();\
+    floatOperations();\
+    memoryBenchmark();\
+    hardDriveBenchmark();\
+    \
+    \
+    return 0;\
+\}\
 \
 \
 }
