@@ -31,4 +31,23 @@ void memoryBenchmark()\{\
     auto time = duration_cast<seconds>(stop - start);\
     cout << "The memory benchmark takes " << time.count() << " seconds." << endl;\
 \
-\}}
+\}\
+\
+//creates and it will print the integer x on the file 10^9 times\
+void hardDriveBenchmark()\{\
+    auto start = high_resolution_clock::now();\
+    ofstream myfile;\
+    myfile.open("test.txt");\
+    int x = 2;\
+    for(int j = 0; j < 10000; j++)\{\
+        \
+    \}\
+    for(long long i=0; i<100000; i++)\{\
+        myfile << x << endl;\
+    \}\
+    myfile.close();\
+    auto stop = high_resolution_clock::now();\
+    auto time = duration_cast<seconds>(stop - start);\
+    cout << "The hard drive benchmark takes " << time.count() << " seconds." << endl;\
+\}\
+}
