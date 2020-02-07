@@ -69,4 +69,24 @@ void intOperations()\{\
     auto time = duration_cast<seconds>(stop - start);\
     cout << "The integer operation benchmark takes " << time.count() << " seconds." << endl;\
 \}\
+\
+//allows you to add, multiply, and divide floats for that many iterations \
+void floatOperations()\{\
+    auto total = 0;\
+    auto start = high_resolution_clock::now();\
+    int b = rand();\
+     for(long long i=1; i<100000000000; i++)\{\
+        int n = b+b;\
+    \}\
+    for(long long i=1; i<10000000000; i++)\{\
+        int n = b*b;\
+    \}\
+    for(long long i=1; i<20000000000; i++)\{\
+        int n = b/b;\
+    \}\
+    auto stop = high_resolution_clock::now();\
+    auto time = duration_cast<seconds>(stop - start);\
+    cout << "The float point operation benchmark takes " << time.count() << " seconds." << endl;\
+\
+\
 }
