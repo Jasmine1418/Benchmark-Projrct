@@ -50,4 +50,23 @@ void hardDriveBenchmark()\{\
     auto time = duration_cast<seconds>(stop - start);\
     cout << "The hard drive benchmark takes " << time.count() << " seconds." << endl;\
 \}\
+\
+//allows you to add, multiply, and divide integers for that many iterations\
+void intOperations()\{\
+    auto total = 0;\
+    auto start = high_resolution_clock::now();\
+    int a = rand();\
+    for(long long i=1; i<100000000000; i++)\{\
+        int n = a+a;\
+    \}\
+    for(long long i=1; i<50000000000; i++)\{\
+        int n = a*a;\
+    \}\
+    for(long long i=1; i<20000000000; i++)\{\
+        int n = a/a;\
+    \}\
+    auto stop = high_resolution_clock::now();\
+    auto time = duration_cast<seconds>(stop - start);\
+    cout << "The integer operation benchmark takes " << time.count() << " seconds." << endl;\
+\}\
 }
